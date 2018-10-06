@@ -10,12 +10,13 @@ export class HtmlWebpackNConfigPlugin
     public constructor(config: object)
     {
         given(config, "config").ensureHasValue().ensureIsObject();
+        this._config = config;
     }
 
 
     public apply(compiler: object | any): void
     {
-        // given(compiler, "compiler").ensureHasValue().ensureIsObject();
+        given(compiler, "compiler").ensureHasValue().ensureIsObject();
         
         compiler.hooks.compilation.tap("HtmlWebpackNConfigPlugin", (compilation: any) =>
         {
