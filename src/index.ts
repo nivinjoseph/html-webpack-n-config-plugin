@@ -13,9 +13,9 @@ export class HtmlWebpackNConfigPlugin
     }
 
 
-    public apply(compiler: object | any)
+    public apply(compiler: object | any): void
     {
-        given(compiler, "compiler").ensureHasValue().ensureIsObject();
+        // given(compiler, "compiler").ensureHasValue().ensureIsObject();
         
         compiler.hooks.compilation.tap("HtmlWebpackNConfigPlugin", (compilation: any) =>
         {
