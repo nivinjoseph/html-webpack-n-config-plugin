@@ -1,6 +1,6 @@
 {
   "name": "@nivinjoseph/html-webpack-n-config-plugin",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Webpack plugin to inject config into html for the consumption of n-config",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
