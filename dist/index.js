@@ -7,7 +7,6 @@ class HtmlWebpackNConfigPlugin {
         n_defensive_1.given(config, "config").ensureHasValue().ensureIsObject();
     }
     apply(compiler) {
-        n_defensive_1.given(compiler, "compiler").ensureHasValue().ensureIsObject();
         compiler.hooks.compilation.tap("HtmlWebpackNConfigPlugin", (compilation) => {
             compilation.hooks.htmlWebpackPluginAfterHtmlProcessing.tapAsync("HtmlWebpackNConfigPlugin", (data, cb) => {
                 data.html = data.html.replace("<body>", `
